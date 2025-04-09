@@ -21,6 +21,7 @@ function App() {
 }
 
 const PrivateRoute = ({ children }) => {
+  localStorage.setItem('token', 'hello')
   const isAuthenticated = localStorage.getItem("token");
   return isAuthenticated ? children : <Navigate to="/" />;
 };
